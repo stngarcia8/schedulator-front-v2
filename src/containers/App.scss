@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    background: white;
+    padding: 0;
+}
+
+iframe{
+    z-index: -99999 !important;
+}
+
+section,
+article,
+header,
+footer {
+    width: 100%;
+    max-width: 100%;
+}
