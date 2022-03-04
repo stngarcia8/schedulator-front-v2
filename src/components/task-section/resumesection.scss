@@ -1,0 +1,19 @@
+.resume {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.resume-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.title4 {
+  margin-left: 15px;
+}

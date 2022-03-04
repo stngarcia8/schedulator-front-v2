@@ -5,7 +5,6 @@ const Presentation = () => {
 
   return (
     <div >
-      <p>
         <p className="paragraph">
           El proposito de esta página es mostrar los resultados de
           las tareas organizadas, que son cargadas de la ruta
@@ -13,8 +12,6 @@ const Presentation = () => {
           expuestos por la API solicitada consumiendo la información
           generada del servicio http://localhost:8080/generator/schedule/tasks
         </p>
-
-      </p>
     </div>
   )
 

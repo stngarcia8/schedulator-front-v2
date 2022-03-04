@@ -2,23 +2,23 @@ $backColor:green;
 $textColor: white;
 
 
-.header  {
+.header {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content:space-between ;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
   background-color: $backColor;
   padding: 10px 20px 15px 20px;
 }
 
-.brand{
+.brand {
   display: flex;
   flex-flow: co nowrap;
-  justify-content:space-between ;
+  justify-content: space-between;
   align-items: center;
   background-color: $backColor;
 
-  div{
+  div {
     background-color: $backColor;
   }
 
@@ -27,7 +27,7 @@ $textColor: white;
     height: 75px;
     border-radius: 2.5rem;
 
-    &:hover{
+    &:hover {
       transform: scale(1.1);
       transition: all ease 0.5s;
       border: 1px solid #000000;
@@ -38,7 +38,6 @@ $textColor: white;
 
 h1 {
   padding: .5rem 2vw;
-  color: $textColor ;
+  color: $textColor;
   background-color: $backColor;
 }
-

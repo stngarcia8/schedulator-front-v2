@@ -19,9 +19,6 @@ const HeaderPage = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h1>Daniel García</h1>
-      </div>
     </header>
     <Presentation />
   </>)

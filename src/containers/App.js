@@ -1,15 +1,20 @@
 import React from 'react'
-import './App.scss';
-import HomePage from '../pages/HomePage';
+import { Provider } from 'react-redux'
+import { taskStore } from '../reducers/taskStore'
+import './App.scss'
+import HomePage from '../pages/HomePage'
 
 const App = () => {
-  
 
-  return (
-    <div >
-      <HomePage />     
-    </div>
-  );
+
+  return (<>
+    <Provider store={taskStore}>
+      <HomePage />
+    </Provider>
+  </>)
 }
 
-export default App;
+export default App
+
+
+ 
