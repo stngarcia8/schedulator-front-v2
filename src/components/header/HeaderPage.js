@@ -7,17 +7,11 @@ const HeaderPage = () => {
 
   return (<>
     <header className="header">
-      <div >
-        <div className="brand">
-          <div>
-            <img src={logo} alt="Task schedulator" />
-          </div>
-          <div>
-            <h1>
-              Task Schedulator front
-            </h1>
-          </div>
-        </div>
+      <div className="brand">
+        <img className="image" src={logo} alt="Task schedulator" />
+        <h1 className="header-title" >
+          Task Schedulator front
+        </h1>
       </div>
     </header>
     <Presentation />

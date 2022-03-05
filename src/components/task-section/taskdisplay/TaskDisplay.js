@@ -1,26 +1,35 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { useSelector } from 'react-redux'
+import { TaskContext } from '../../../contexts/TaskContext'
 import { BsFolderCheck } from 'react-icons/bs'
 import './taskdisplay.scss'
-import Logo from '../../assets/images/task.png'
+import Logo from '../../../assets/images/task.png'
+import TaskDisplayModal from './TaskDisplayModal'
 
 const TaskDisplay = () => {
   const { days } = useSelector(state => state.taskData)
+  const taskContext = useContext(TaskContext)
+
+  const handleClick = (event) => {
+    if (taskContext.isOpenModal) return
+    event.preventDefault()
+    taskContext.setCurrentDay(event.target.value)
+    taskContext.setIsOpenModal(true)
+  }
 
   const renderTask = () => {
     return days.map((day, index) => {
       return (
         <div key={index} className="task-item">
-          <div>
-            <img className="image-detail" src={Logo} alt="task" />
-          </div>
-          <div className="title-detail">
-            <h2>Día {day?.dayNumber}</h2>
-          </div>
+          <img className="image-detail" src={Logo} alt="task" />
+          <h2 className="title-detail">Día {day?.dayNumber}</h2>
           <span className="text-detail">
             Tareas asignadas: {day.taskPerDay}
           </span>
-          <button className="button-details">
+          <button className="button-details"
+            value={day?.dayNumber}
+            onClick={(e) => handleClick(e)}
+          >
             <BsFolderCheck className="button-icon" />
             Ver detalles
           </button>
@@ -29,11 +38,11 @@ const TaskDisplay = () => {
     })
   }
 
-  return (
+  return (<>
     <div className="task-display">
       {renderTask()}
     </div>
-  )
+  </>)
 
 }
 

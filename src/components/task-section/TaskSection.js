@@ -4,14 +4,14 @@ import LoadButton from './LoadButton'
 import NoTask from './notask/NoTask'
 import ErrorDisplay from './errors/ErrorDisplay'
 import ResumeSection from './ResumeSection'
-import TaskDisplay from './TaskDisplay'
+import TaskDisplay from './taskdisplay/TaskDisplay'
 import './tasksection.scss'
 
 const TaskSection = () => {
-  const { totalTasks, statusResponse} = useSelector(state => state.taskData)
+  const { totalTasks, statusResponse } = useSelector(state => state.taskData)
 
   const renderContent = () => {
-    if (statusResponse>= 400) return (<ErrorDisplay errorCode={statusResponse} />)
+    if (statusResponse >= 400) return (<ErrorDisplay errorCode={statusResponse} />)
     if (totalTasks === 0) return (<NoTask />)
     return (<>
       <ResumeSection />
@@ -20,12 +20,14 @@ const TaskSection = () => {
   }
 
 
-  return (<>
+  return (
+    <div className="section-container">
     <div className="button-section">
       <LoadButton />
     </div>
     {renderContent()}
-  </>)
+    </div>
+  )
 
 }
 

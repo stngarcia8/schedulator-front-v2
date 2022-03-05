@@ -1,18 +1,21 @@
-button {
-  background-color: green;
-  color: white;
-  border-radius: 15px;
+@use '../../styles/globals/Mixins.scss'as *;
+
+
+.load-button {
+  background-color: $bgPrimaryColor;
+  color: $fgPrimaryColor;
+  @include roundedButton;
   padding: 15px 2rem;
 
   &:hover {
-    background-color: white;
-    color: green;
+    background-color: $bgSecondaryColor;
+    color: $fgSecondaryColor;
     transform: scale(1.1);
-    transition: all ease 0.5s;
-    border: 2px solid green;
+    @include transition(all ease 0.5s);
+    border: 2px solid $bgPrimaryColor;
   }
 }
 
 .icon {
-  margin-right: 10px;
+  @include buttonIcon;
 }

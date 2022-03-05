@@ -1,6 +1,13 @@
-.button-section {
-  display:flex;
-  justify-content: center;
-  padding:  10px;
+@use '../../styles/globals/Mixins.scss'as *;
+
+.section-container {
+  background-color: $bgBodyColor;
+  color: $fgBodyColor;
 }
 
+
+.button-section {
+  @include flexRow;
+  @include flexCenter;
+  padding: 10px;
+}

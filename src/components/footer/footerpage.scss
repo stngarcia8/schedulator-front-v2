@@ -1,0 +1,17 @@
+@use '../../styles/globals/Mixins.scss'as *;
+
+.footer {
+  height: 10%;
+  @include flexColumn;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: $bgFooterColor;
+}
+
+.footer-text {
+  margin: auto;
+  line-height: 1.5rem;
+  background-color: $bgFooterColor;
+  color: $fgFooterColor;
+
+}

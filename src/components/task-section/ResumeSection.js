@@ -4,7 +4,7 @@ import { BsFillSaveFill, BsFillCheckSquareFill } from 'react-icons/bs'
 import './resumesection.scss'
 
 const ResumeSection = () => {
-  const {totalTasks, totalDays } = useSelector(state => state.taskData);
+  const { totalTasks, totalDays } = useSelector(state => state.taskData)
 
   return (
     <div className="resume">
@@ -12,7 +12,7 @@ const ResumeSection = () => {
         <BsFillSaveFill />
         <h4 className="title4">
           Total tareas cargadas:
-          <span> {totalTasks }</span>
+          <span> {totalTasks}</span>
         </h4>
       </div>
       <div className="resume-section">

@@ -1,43 +1,38 @@
-$backColor:green;
-$textColor: white;
+@use '../../styles/globals/Mixins.scss'as *;
 
 
 .header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  height: 20%;
+  @include flexRow;
   align-items: center;
-  background-color: $backColor;
+  background-color: $bgHeaderColor;
   padding: 10px 20px 15px 20px;
 }
 
 .brand {
-  display: flex;
-  flex-flow: co nowrap;
+  @include flexRow;
   justify-content: space-between;
   align-items: center;
-  background-color: $backColor;
+  background-color: $bgHeaderColor;
+  color: $fgFooterColor;
+}
 
-  div {
-    background-color: $backColor;
-  }
+.image {
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+  @include borderRadius(2.5rem);
 
-  img {
-    width: 75px;
-    height: 75px;
-    border-radius: 2.5rem;
+  &:hover {
+    transform: scale(1.1);
+    @include transition(all ease 0.5s);
+    @include borderRadius(1px solid #000000);
 
-    &:hover {
-      transform: scale(1.1);
-      transition: all ease 0.5s;
-      border: 1px solid #000000;
-
-    }
   }
 }
 
-h1 {
+.header-title {
+  background-color: $bgHeaderColor;
+  color: $fgHeaderColor;
   padding: .5rem 2vw;
-  color: $textColor;
-  background-color: $backColor;
 }

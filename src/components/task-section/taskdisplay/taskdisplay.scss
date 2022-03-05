@@ -1,3 +1,6 @@
+@use '../../../styles/globals/Mixins.scss'as *;
+
+
 .task-display {
   display: grid;
   gap: 1.5rem;
@@ -7,49 +10,50 @@
 
 .task-item {
   width: 90%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: lightgray;
-  border-radius: 10px;
+  @include flexColumn;
+  @include flexCenter;
+  background-color: $bgTaskItemColor;
+  @include borderRadius(10px);
 }
 
 .image-detail {
   width: 8rem;
-  height: 10rem;
-  border:  1px solid gray;
-  border-radius: 10px;
-  box-shadow: 2px 2px 3px 3px black;
+  height: 8rem;
+  border: 1px solid gray;
+  @include borderRadius(10px);
+  box-shadow: 2px 2px 3px 3px $fgBodyColor;
 }
-
 
 .title-detail {
   margin: 15px;
   font-weight: bold;
+  font-size: 2rem;
+}
+
+
+.text-detail {
+  margin-bottom: 15px;
+  font-style: italic;
   font-size: 1.5rem;
 }
 
-
-.text-detail{
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
 .button-details {
-  background-color: white;
-  color: black;
-  border-radius: 15px;
-  border: 2px, solid, black;
-  padding: 10px, 2rem;
+  background-color: $bgSecondaryColor;
+  color: $fgSecondaryColor;
+  @include roundedButton;
+  border: 2px solid $fgBodyColor;
+  margin: 10px;
+  font-size: 1.25rem;
+  height: 3rem;
+  width: 15rem;
 
-  &:hover{
-    background-color:  green;
-    color: white;
+  &:hover {
+    background-color: $bgPrimaryColor;
+    color: $fgPrimaryColor;
     border: none;
   }
 }
 
-.button-icon{
-  margin-right:  10px;
+.button-icon {
+  @include buttonIcon;
 }

@@ -1,0 +1,96 @@
+// font definition
+$roboto: 'Roboto',
+sans-serif;
+
+// background colors definitions
+$bgHeaderColor: rgb(0, 120, 0);
+$bgBodyColor: rgb(230, 230, 230);
+$bgFooterColor:rgb(192, 192, 192);
+$bgPrimaryColor: rgb(0, 120, 0);
+$bgSecondaryColor: rgb(255, 255, 255);
+$bgTaskItemColor: rgb(220, 220, 220);
+
+// text color definitions
+$fgHeaderColor: rgb(230, 230, 230);
+$fgBodyColor:rgb(0, 0, 0);
+$fgFooterColor: rgb(40, 40, 40);
+$fgAlertColor: rgb(186, 12, 6);
+$fgTextColor:rgb(61, 61, 61);
+$fgPrimaryColor: rgb(255, 255, 255);
+$fgSecondaryColor: rgb(0, 100, 0);
+
+// transition mixing
+@mixin transition($time) {
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+}
+
+// border mixing
+@mixin borderRadius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+// flex display row wrap mixin
+@mixin flexRow {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// flex display column mixin
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+// flex center mixin
+@mixin flexCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+// center mixin
+@mixin centerWidth {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+// paragraph mixin
+
+@mixin paragraph {
+  padding: 2.5rem 3vw;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@mixin normalParagraph {
+  background-color: $bgBodyColor;
+  color: $fgBodyColor;
+}
+
+@mixin alertParagraph {
+  background-color: $bgBodyColor;
+  color: $fgAlertColor;
+}
+
+@mixin roundedButton {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+}
+
+@mixin titleText{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@mixin buttonIcon {
+  margin-right: 10px;
+}

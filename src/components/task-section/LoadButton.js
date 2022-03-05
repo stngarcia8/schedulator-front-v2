@@ -15,7 +15,8 @@ const LoadButton = () => {
   }
 
   return (<>
-    <button
+    <button name="load-button"
+      className="load-button"
       onClick={handleClick}
     >
       <BsFillCheckCircleFill className="icon" />

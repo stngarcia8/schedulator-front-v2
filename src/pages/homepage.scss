@@ -1,4 +1,7 @@
-div {
-  background-color: white;
-  color: black;
+@use '../styles/globals/Mixins.scss'as *;
+
+
+.body-container {
+  background-color: $bgBodyColor;
+  color: $fgBodyColor;
 }
