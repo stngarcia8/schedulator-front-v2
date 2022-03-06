@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import LoadButton from './LoadButton'
 import NoTask from './notask/NoTask'
@@ -9,6 +9,8 @@ import './tasksection.scss'
 
 const TaskSection = () => {
   const { totalTasks, statusResponse } = useSelector(state => state.taskData)
+
+
 
   const renderContent = () => {
     if (statusResponse >= 400) return (<ErrorDisplay errorCode={statusResponse} />)
@@ -22,10 +24,10 @@ const TaskSection = () => {
 
   return (
     <div className="section-container">
-    <div className="button-section">
-      <LoadButton />
-    </div>
-    {renderContent()}
+      <div className="button-section">
+        <LoadButton />
+      </div>
+      {renderContent()}
     </div>
   )
 

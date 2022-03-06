@@ -1,3 +1,6 @@
+@use './styles/globals/Mixins.scss' as *;
+
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -30,7 +33,7 @@ ul {
 
 html,
 body {
-  font-size: 16px;
+  font-size: $fontSize;
   margin: 0;
 }
 
