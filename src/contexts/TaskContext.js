@@ -8,10 +8,14 @@ export const TaskContextProvider = ({ children }) => {
 
   return (
     <TaskContext.Provider value={{
-      isOpenModal, setIsOpenModal,
-      loading, setLoading,
-      currentDay, setCurrentDay
-    }} >
+      isOpenModal,
+      setIsOpenModal,
+      currentDay,
+      setCurrentDay,
+      loading,
+      setLoading
+    }}
+    >
       {children}
     </TaskContext.Provider>
   )

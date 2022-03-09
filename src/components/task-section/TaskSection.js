@@ -1,36 +1,34 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import LoadButton from './LoadButton'
-import NoTask from './notask/NoTask'
-import ErrorDisplay from './errors/ErrorDisplay'
-import ResumeSection from './ResumeSection'
+import NoTaskComponent from './notask/NoTaskComponent'
+import ErrorComponent from './errors/ErrorComponent'
+import ResumeComponent from './resume/ResumeComponent'
 import TaskDisplay from './taskdisplay/TaskDisplay'
+import useTaskData from '../../hooks/useTaskData'
 import './tasksection.scss'
 
 const TaskSection = () => {
-  const { totalTasks, statusResponse } = useSelector(state => state.taskData)
-
-
+  const { noTask, isDataLoadingError } = useTaskData()
 
   const renderContent = () => {
-    if (statusResponse >= 400) return (<ErrorDisplay errorCode={statusResponse} />)
-    if (totalTasks === 0) return (<NoTask />)
-    return (<>
-      <ResumeSection />
-      <TaskDisplay />
-    </>)
+    if (isDataLoadingError()) return (<ErrorComponent />)
+    if (noTask()) return (<NoTaskComponent />)
+    return (
+      <>
+        <ResumeComponent />
+        <TaskDisplay />
+      </>
+    )
   }
 
-
   return (
-    <div className="section-container">
-      <div className="button-section">
+    <div className='section-container'>
+      <div className='button-section'>
         <LoadButton />
       </div>
       {renderContent()}
     </div>
   )
-
 }
 
 export default TaskSection

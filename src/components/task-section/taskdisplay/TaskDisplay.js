@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import { TaskContext } from '../../../contexts/TaskContext'
 import { BsFolderCheck } from 'react-icons/bs'
 import './taskdisplay.scss'
 import Logo from '../../../assets/images/task.png'
-import TaskDisplayModal from './TaskDisplayModal'
 
 const TaskDisplay = () => {
   const { days } = useSelector(state => state.taskData)
@@ -20,17 +19,18 @@ const TaskDisplay = () => {
   const renderTask = () => {
     return days.map((day, index) => {
       return (
-        <div key={index} className="task-item">
-          <img className="image-detail" src={Logo} alt="task" />
-          <h2 className="title-detail">Día {day?.dayNumber}</h2>
-          <span className="text-detail">
+        <div key={index} className='task-item'>
+          <img className='image-detail' src={Logo} alt='task' />
+          <h2 className='title-detail'>Día {day?.dayNumber}</h2>
+          <span className='text-detail'>
             Tareas asignadas: {day.taskPerDay}
           </span>
-          <button className="button-details"
+          <button
+            className='button-details'
             value={day?.dayNumber}
             onClick={(e) => handleClick(e)}
           >
-            <BsFolderCheck className="button-icon" />
+            <BsFolderCheck className='button-icon' />
             Ver detalles
           </button>
         </div>
@@ -38,12 +38,13 @@ const TaskDisplay = () => {
     })
   }
 
-  return (<>
-    <div className="task-display">
-      {renderTask()}
-    </div>
-  </>)
-
+  return (
+    <>
+      <div className='task-display'>
+        {renderTask()}
+      </div>
+    </>
+  )
 }
 
 export default TaskDisplay

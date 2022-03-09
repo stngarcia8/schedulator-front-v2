@@ -17,7 +17,6 @@ const TaskDisplayModal = () => {
     getTaskByDay()
   }, [taskContext.currentDay])
 
-
   const closeModal = () => {
     if (!taskContext.isOpenModal) return
     taskContext.setIsOpenModal(false)
@@ -29,13 +28,12 @@ const TaskDisplayModal = () => {
     setCurrentDay(dayFound)
   }
 
-
   return (
-    <Modal show={taskContext.isOpenModal} onClose={closeModal} onHide={() => { closeModal() }} backdrop="static" keyboard={false} size="md">
+    <Modal show={taskContext.isOpenModal} onClose={closeModal} onHide={() => { closeModal() }} backdrop='static' keyboard={false} size='md'>
       <Modal.Header>
         <Modal.Title>
-          <div className="header-content ">
-            <img className="image" src={image} alt="Task" />
+          <div className='header-content '>
+            <img className='image' src={image} alt='Task' />
             <div>
               <h1> Día {currentDay.dayNumber} </h1>
               <h4>Tareas asignadas: <strong> {currentDay.taskPerDay}</strong></h4>
@@ -45,20 +43,21 @@ const TaskDisplayModal = () => {
       </Modal.Header>
 
       <Modal.Body>
-          <TaskDisplayItem tasks={currentDay.tasks} />
+        <TaskDisplayItem tasks={currentDay.tasks} />
       </Modal.Body>
 
       <Modal.Footer>
-        <button type="button" className="modal-button"
-          onClick={() => closeModal()}>
-          <BsCheckCircle className="buttonIcon" />
+        <button
+          type='button' className='modal-button'
+          onClick={() => closeModal()}
+        >
+          <BsCheckCircle className='buttonIcon' />
           Cerrar
         </button>
       </Modal.Footer>
 
     </Modal>
   )
-
 }
 
 export default TaskDisplayModal

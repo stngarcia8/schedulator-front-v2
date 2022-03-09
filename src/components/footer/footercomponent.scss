@@ -1,6 +1,7 @@
 @use '../../styles/globals/Mixins.scss'as *;
 
 .footer {
+  bottom: 0;
   height: 10%;
   @include flexColumn;
   margin-top: 25px;

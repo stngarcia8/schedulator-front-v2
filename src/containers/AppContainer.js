@@ -4,19 +4,19 @@ import { taskStore } from '../reducers/taskStore'
 import { TaskContextProvider } from '../contexts/TaskContext'
 import TaskDisplayModal from '../components/task-section/taskdisplay/TaskDisplayModal'
 import HomePage from '../pages/HomePage'
-import './App.scss'
+import './appcontainer.scss'
 
-const App = () => {
-  return (<>
-    <Provider store={taskStore}>
-      <TaskContextProvider>
-        <TaskDisplayModal />
-        <HomePage />
-      </TaskContextProvider>
-    </Provider>
-  </>)
+const AppContainer = () => {
+  return (
+    <>
+      <Provider store={taskStore}>
+        <TaskContextProvider>
+          <TaskDisplayModal />
+          <HomePage />
+        </TaskContextProvider>
+      </Provider>
+    </>
+  )
 }
 
-export default App
-
-
+export default AppContainer

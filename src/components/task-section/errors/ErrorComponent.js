@@ -1,13 +1,14 @@
 import React from 'react'
-import './errordisplay.scss'
+import useTaskData from '../../../hooks/useTaskData'
+import './errorcomponent.scss'
 import Error500 from '../../../assets/images/error500.png'
 import Error404 from '../../../assets/images/error404.png'
 
-const ErrorDisplay = (props) => {
-  const { errorCode } = props
+const ErrorComponent = () => {
+  const { isInternalServerError } = useTaskData()
 
   const getErrorText = () => {
-    if (errorCode === 500)
+    if (isInternalServerError())
       return (`
         El servidor de tareas no se encuentra disponible,
         pruebe a intentar cargar información en un momento. 
@@ -21,7 +22,7 @@ const ErrorDisplay = (props) => {
   }
 
   const renderImage = () => {
-    if (errorCode === 500)
+    if (isInternalServerError())
       return (<img className="error-image" src={Error500} alt="Internal server error" />)
     return (<img className="error-image" src={Error404} alt="Not found" />)
   }
@@ -40,4 +41,4 @@ const ErrorDisplay = (props) => {
 
 }
 
-export default ErrorDisplay
+export default ErrorComponent

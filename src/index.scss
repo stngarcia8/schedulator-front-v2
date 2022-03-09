@@ -1,5 +1,4 @@
-@use './styles/globals/Mixins.scss' as *;
-
+@use './styles/globals/Mixins.scss'as *;
 
 
 * {
@@ -26,8 +25,9 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+
   li {
-      margin: 0;
+    margin: 0;
   }
 }
 
@@ -55,4 +55,3 @@ a:active,
 a:focus {
   color: inherit;
 }
-

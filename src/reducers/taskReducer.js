@@ -1,5 +1,4 @@
-import { TaskActionTypes } from "./TaskActionTypes"
-import { SearchType } from "../shared/contants"
+import { TaskActionTypes } from './TaskActionTypes'
 const initialState = {
   totalTasks: 0,
   totalDays: 0,
@@ -36,7 +35,6 @@ const exceptionResolver = (payload) => {
     statusResponse: payload.codeStatus
   }
 }
-
 
 export {
   taskReducer

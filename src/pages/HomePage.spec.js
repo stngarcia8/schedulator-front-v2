@@ -6,8 +6,6 @@ import HomePage from './HomePage'
 describe('Home page should', () => {
   it('Verify if main container is loaded', () => {
     render(<HomePage />)
-    expect(screen.getByText("Hola po dani")).toBeInTheDocument()
-
+    expect(screen.getByText('Hola po dani')).toBeInTheDocument()
   })
 })
-
