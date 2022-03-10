@@ -1,4 +1,5 @@
-import { TaskActionTypes } from './TaskActionTypes'
+import { TaskTypes } from './types/TaskTypes'
+
 const initialState = {
   totalTasks: 0,
   totalDays: 0,
@@ -8,11 +9,11 @@ const initialState = {
 
 const taskReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TaskActionTypes.GET_BY_TASK_DURATION:
+    case TaskTypes.GET_BY_TASK_DURATION:
       return stateResolver(action.payload)
-    case TaskActionTypes.GET_BY_TASK_PER_DAY:
+    case TaskTypes.GET_BY_TASK_PER_DAY:
       return stateResolver(action.payload)
-    case TaskActionTypes.GET_AN_EXCEPTION:
+    case TaskTypes.GET_AN_EXCEPTION:
       return exceptionResolver(action.payload)
     default:
       return initialState

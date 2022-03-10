@@ -1,10 +1,6 @@
 import React from 'react'
-import LoadButton from './LoadButton'
-import NoTaskComponent from './notask/NoTaskComponent'
-import ErrorComponent from './errors/ErrorComponent'
-import ResumeComponent from './resume/ResumeComponent'
-import TaskDisplay from './taskdisplay/TaskDisplay'
-import useTaskData from '../../hooks/useTaskData'
+import { ButtonLoadComponent, NoTaskComponent, ErrorComponent, ResumeComponent, DisplayListComponent } from '.'
+import { useTaskData } from '../../hooks'
 import './tasksection.scss'
 
 const TaskSection = () => {
@@ -24,7 +20,7 @@ const TaskSection = () => {
   return (
     <div className='section-container'>
       <div className='button-section'>
-        <LoadButton />
+        <ButtonLoadComponent />
       </div>
       {renderContent()}
     </div>

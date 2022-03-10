@@ -1,4 +1,4 @@
-export const TaskActionTypes = {
+export const TaskTypes = {
   GET_BY_TASK_DURATION: 'getByTaskDuration',
   GET_BY_TASK_PER_DAY: 'getByTaskPerDay',
 

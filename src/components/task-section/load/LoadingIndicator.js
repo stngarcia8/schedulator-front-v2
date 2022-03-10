@@ -1,8 +1,11 @@
 import React from 'react'
+import './loadingindicator.scss'
 
 const LoadingIndicator = () => {
   return (
-    <h1>Cargando...</h1>
+    <>
+      <h1>Cargando tareas...</h1>
+    </>
   )
 }
 

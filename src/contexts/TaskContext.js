@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 export const TaskContext = React.createContext()
 export const TaskContextProvider = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState(false)
-  const [loading, setLoading] = useState(false)
   const [currentDay, setCurrentDay] = useState(0)
 
   return (
@@ -11,9 +10,7 @@ export const TaskContextProvider = ({ children }) => {
       isOpenModal,
       setIsOpenModal,
       currentDay,
-      setCurrentDay,
-      loading,
-      setLoading
+      setCurrentDay
     }}
     >
       {children}

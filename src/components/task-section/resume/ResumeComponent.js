@@ -1,5 +1,5 @@
 import React from 'react'
-import useTaskData from '../../../hooks/useTaskData'
+import { useTaskData } from '../../../hooks/useTaskData'
 import { BsFillSaveFill, BsFillCheckSquareFill } from 'react-icons/bs'
 import './resumecomponent.scss'
 

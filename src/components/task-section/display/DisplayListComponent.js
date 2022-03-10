@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { useSelector } from 'react-redux'
 import { TaskContext } from '../../../contexts/TaskContext'
 import { BsFolderCheck } from 'react-icons/bs'
-import './taskdisplay.scss'
+import './displaylistcomponent.scss'
 import Logo from '../../../assets/images/task.png'
 
-const TaskDisplay = () => {
+const DisplayListComponent = () => {
   const { days } = useSelector(state => state.taskData)
   const taskContext = useContext(TaskContext)
 
@@ -47,4 +47,4 @@ const TaskDisplay = () => {
   )
 }
 
-export default TaskDisplay
+export default DisplayListComponent
