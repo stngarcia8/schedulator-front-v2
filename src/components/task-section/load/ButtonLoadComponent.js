@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { useLoadButton, useLoadIndicator } from '../../../hooks'
-import LoadingIndicator from './LoadingIndicator'
+import LoadIndicatorComponent from './LoadIndicatorComponent'
 import './buttonloadcomponent.scss'
 
 const ButtonLoadComponent = () => {
@@ -9,7 +9,7 @@ const ButtonLoadComponent = () => {
   const { handleClick } = useLoadButton()
 
   const renderContent = () => {
-    if (isLoading) return (<LoadingIndicator />)
+    if (isLoading) return (<LoadIndicatorComponent />)
     return (
       <>
         <button

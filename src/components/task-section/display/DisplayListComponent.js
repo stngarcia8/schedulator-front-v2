@@ -1,23 +1,15 @@
-import React, { useContext } from 'react'
-import { useSelector } from 'react-redux'
-import { TaskContext } from '../../../contexts/TaskContext'
+import React from 'react'
+import { useTaskData, useDetailButton } from '../../../hooks'
 import { BsFolderCheck } from 'react-icons/bs'
 import './displaylistcomponent.scss'
 import Logo from '../../../assets/images/task.png'
 
 const DisplayListComponent = () => {
-  const { days } = useSelector(state => state.taskData)
-  const taskContext = useContext(TaskContext)
-
-  const handleClick = (event) => {
-    if (taskContext.isOpenModal) return
-    event.preventDefault()
-    taskContext.setCurrentDay(event.target.value)
-    taskContext.setIsOpenModal(true)
-  }
+  const { getDays } = useTaskData()
+  const { handleDetailButtonClick } = useDetailButton()
 
   const renderTask = () => {
-    return days.map((day, index) => {
+    return getDays().map((day, index) => {
       return (
         <div key={index} className='task-item'>
           <img className='image-detail' src={Logo} alt='task' />
@@ -28,7 +20,7 @@ const DisplayListComponent = () => {
           <button
             className='button-details'
             value={day?.dayNumber}
-            onClick={(e) => handleClick(e)}
+            onClick={(e) => handleDetailButtonClick(e)}
           >
             <BsFolderCheck className='button-icon' />
             Ver detalles

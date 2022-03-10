@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux'
-import { BsSearch } from 'react-icons/bs'
 import { SearchType } from '../shared/contants'
 import { loadTask } from '../reducers/actions/taskActions'
 

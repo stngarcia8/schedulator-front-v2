@@ -42,10 +42,7 @@
     "env": {
       "cypress/globals": true
     },
-    "extends": [
-      "./node_modules/standard/eslintrc.json",
-      "react-app/jest"
-    ]
+    "extends": "./node_modules/standard/eslintrc.json"
   },
   "browserslist": {
     "production": [

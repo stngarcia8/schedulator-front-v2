@@ -12,7 +12,7 @@ const TaskSection = () => {
     return (
       <>
         <ResumeComponent />
-        <TaskDisplay />
+        <DisplayListComponent />
       </>
     )
   }
