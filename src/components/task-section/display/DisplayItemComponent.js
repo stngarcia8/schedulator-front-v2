@@ -1,7 +1,8 @@
 import React from 'react'
-import './taskdisplayitem.scss'
 import image from '../../../assets/images/task.png'
-const TaskDisplayItem = (props) => {
+import './displayitemcomponent.scss'
+
+const DisplayItemComponent = (props) => {
   const { tasks } = props
 
   const renderItems = () => {
@@ -12,7 +13,7 @@ const TaskDisplayItem = (props) => {
           <div key={task.taskId} className='task-item'>
             <img className='image' src={image} alt={task.taskName} />
             <span>Tarea: {task.taskName}</span>
-            <span>Duración: {task.duration}</span>
+            <span>Duración: {task.duration} hrs.</span>
           </div>
         )
       })
@@ -26,4 +27,4 @@ const TaskDisplayItem = (props) => {
   )
 }
 
-export default TaskDisplayItem
+export default DisplayItemComponent

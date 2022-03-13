@@ -5,7 +5,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "mock-server": "stubby -w  -s  7000  -d stubs.yaml",
     "test": "react-scripts test",
+    "sonar": "sonar-scanner",
+    "storybook": "start-storybook  -p 6000  -s public",
+    "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -15,13 +19,15 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
     "boostrap": "^2.0.0",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-localstorage-mock": "^2.4.19",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-promise-tracker": "^2.1.0",
     "react-redux": "^7.2.6",
     "react-scripts": "^5.0.0",
+    "react-test-renderer": "^17.0.2",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "sass": "^1.49.9",
@@ -37,12 +43,6 @@
     "nyc": "^15.1.0",
     "sonarqube-scanner": "^2.8.1",
     "standard": "^16.0.4"
-  },
-  "eslintConfig": {
-    "env": {
-      "cypress/globals": true
-    },
-    "extends": "./node_modules/standard/eslintrc.json"
   },
   "browserslist": {
     "production": [

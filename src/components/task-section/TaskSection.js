@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonLoadComponent, NoTaskComponent, ErrorComponent, ResumeComponent, DisplayListComponent } from '.'
 import { useTaskData } from '../../hooks'
+import DisplayModalComponent from './display/DisplayModalComponent'
 import './tasksection.scss'
 
 const TaskSection = () => {
@@ -13,6 +14,7 @@ const TaskSection = () => {
       <>
         <ResumeComponent />
         <DisplayListComponent />
+        <DisplayModalComponent />
       </>
     )
   }

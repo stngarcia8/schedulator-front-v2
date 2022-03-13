@@ -12,6 +12,20 @@ export const useTaskContext = () => {
     taskContext.setCurrentDay(dayNumber)
   }
 
+  const noCurrentDayDefined = () => {
+    return taskContext.currentDay === 0
+  }
+
+  const dayWithoutTasks = () => {
+    return taskContext.currentDay.tasks?.lenght === 0
+  }
+
+  const getTasksOfTheDay = () => {
+    console.log('cachando que tiene el tasks')
+    console.log(taskContext.currentDay.tasks)
+    return taskContext.currentDay.tasks
+  }
+
   const modalIsOpen = () => {
     return taskContext.isOpenModal
   }
@@ -20,5 +34,13 @@ export const useTaskContext = () => {
     taskContext.setIsOpenModal(status)
   }
 
-  return { getCurrentDay, setCurrentDay, modalIsOpen, openModalForm }
+  return {
+    getCurrentDay,
+    setCurrentDay,
+    noCurrentDayDefined,
+    getTasksOfTheDay,
+    dayWithoutTasks,
+    modalIsOpen,
+    openModalForm
+  }
 }

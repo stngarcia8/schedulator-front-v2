@@ -2,10 +2,9 @@ import React from 'react'
 import './presentation.scss'
 
 const Presentation = () => {
-
   return (
     <>
-      <p className="paragraph">
+      <p className='paragraph'>
         El proposito de esta página es mostrar los resultados de
         las tareas organizadas, que son cargadas de la ruta
         http://localhost:8081/task, estos datos son organizados y
@@ -14,7 +13,6 @@ const Presentation = () => {
       </p>
     </>
   )
-
 }
 
 export default Presentation
