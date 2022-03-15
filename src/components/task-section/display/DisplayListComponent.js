@@ -13,18 +13,20 @@ const DisplayListComponent = () => {
       return (
         <div key={index} className='task-item'>
           <img className='image-detail' src={Logo} alt='task' />
-          <h2 className='title-detail'>Día {day?.dayNumber}</h2>
-          <span className='text-detail'>
-            Tareas asignadas: {day.taskPerDay}
-          </span>
-          <button
-            className='button-details'
-            value={day?.dayNumber}
-            onClick={(e) => handleDetailButtonClick(e)}
-          >
-            <BsFolderCheck className='button-icon' />
-            Ver detalles
-          </button>
+          <div className='group-details'>
+            <h2 className='title-detail'>Día {day?.dayNumber}</h2>
+            <span className='text-detail'>
+              Tareas: {day.taskPerDay}
+            </span>
+            <button
+              className='button-details'
+              value={day?.dayNumber}
+              onClick={(e) => handleDetailButtonClick(e)}
+            >
+              <BsFolderCheck className='button-icon' />
+              Ver detalles
+            </button>
+          </div>
         </div>
       )
     })

@@ -6,8 +6,9 @@
 }
 
 
-.button-section {
+.controls-section {
   @include flexRow;
   @include flexCenter;
+  justify-content:space-evenly;
   padding: 10px;
 }

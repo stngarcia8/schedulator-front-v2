@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonLoadComponent, NoTaskComponent, ErrorComponent, ResumeComponent, DisplayListComponent } from '.'
+import { ButtonLoadComponent, SorterComponent, NoTaskComponent, ErrorComponent, ResumeComponent, DisplayListComponent } from '.'
 import { useTaskData } from '../../hooks'
 import DisplayModalComponent from './display/DisplayModalComponent'
 import './tasksection.scss'
@@ -21,7 +21,8 @@ const TaskSection = () => {
 
   return (
     <div className='section-container'>
-      <div className='button-section'>
+      <div className='controls-section'>
+        <SorterComponent />
         <ButtonLoadComponent />
       </div>
       {renderContent()}
