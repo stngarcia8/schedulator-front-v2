@@ -1,15 +1,15 @@
 import React from 'react'
-import FooterComponent from '../components/footer/FooterComponent'
-import HeaderComponent from '../components/header/HeaderComponent'
+import { Header, Presentation, Footer } from '../components/commons'
 import TaskSection from '../components/task-section/TaskSection'
 import './homepage.scss'
 
 const HomePage = () => {
   return (
     <div className='body-container'>
-      <HeaderComponent />
+      <Header />
+      <Presentation />
       <TaskSection />
-      <FooterComponent />
+      <Footer />
     </div>
   )
 }

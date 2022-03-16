@@ -8,7 +8,7 @@
     "mock-server": "stubby -w  -s  7000  -d stubs.yaml",
     "test": "react-scripts test",
     "sonar": "sonar-scanner",
-    "storybook": "start-storybook  -p 6000  -s public",
+    "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject"
   },
@@ -19,6 +19,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
     "boostrap": "^2.0.0",
+    "cypress": "^9.5.2",
     "jest-fetch-mock": "^3.0.3",
     "jest-localstorage-mock": "^2.4.19",
     "react": "^17.0.2",
@@ -35,14 +36,28 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "eslint": "^7.18.0",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/node-logger": "^6.4.19",
+    "@storybook/preset-create-react-app": "^4.0.1",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.5.7",
     "nyc": "^15.1.0",
     "sonarqube-scanner": "^2.8.1",
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "storybook-dark-mode": "^1.0.9",
+    "webpack": "^5.70.0"
   },
   "browserslist": {
     "production": [
@@ -60,6 +75,11 @@
     "resetMocks": false
   },
   "standard": {
+    "env": [
+      "jest",
+      "es6",
+      "browser"
+    ],
     "globals": [
       "expect",
       "before",
@@ -69,6 +89,29 @@
       "context",
       "describe",
       "it"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "cypress/globals": true
+    },
+    "extends": [
+      "react-app",
+      "plugin:cypress/recommended"
+    ],
+    "plugins": [
+      "cypress"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }

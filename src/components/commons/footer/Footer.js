@@ -1,14 +1,14 @@
 import React from 'react'
-import './footercomponent.scss'
+import './Footer.scss'
 
-const FooterComponent = () => {
+const Footer = () => {
   return (
     <footer className='footer'>
       <p className='footer-text'>
         Task Schedulator Front - desarrollado por Daniel García Loyola
       </p>
       <p className='footer-text'>
-        Desafío "Banco Internacional"
+        Desafío Banco Internacional
       </p>
       <p className='footer-text'>
         © 2022.
@@ -18,4 +18,4 @@ const FooterComponent = () => {
   )
 }
 
-export default FooterComponent
+export default Footer

@@ -30,7 +30,7 @@ const stateResolver = (payload) => {
   }
 }
 
-const exceptionResolver = (payload) => {
+const exceptionResolver = (state, payload) => {
   return {
     ...initialState,
     statusResponse: payload.codeStatus

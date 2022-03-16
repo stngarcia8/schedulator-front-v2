@@ -83,7 +83,7 @@ $fgSecondaryColor: rgb(0, 100, 0);
   -moz-border-radius: 25px;
 }
 
-@mixin titleText{
+@mixin titleText {
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
@@ -93,4 +93,28 @@ $fgSecondaryColor: rgb(0, 100, 0);
 
 @mixin buttonIcon {
   margin-right: 10px;
+}
+
+@mixin smallMobile {
+  @media only screen and (min-width: 568px) {
+    @content;
+  }
+}
+
+@mixin largeMobile {
+  @media only screen and (min-width: 414px) and (max-width:896px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 834px) and (max-width: 1112px) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media only screen and (min-width: 1113px) and (max-width1920px) {
+    @content;
+  }
 }

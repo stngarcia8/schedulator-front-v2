@@ -7,7 +7,7 @@ const NoTaskComponent = () => {
       <h1 className='no-task-title'>No hay tareas cargadas</h1>
       <p className='no-task-text'>
         En estos momentos no hay tareas cargadas,
-        Presione el botón "Cargar tareas", para verificar la disponibilidad de estas.
+        Presione el botón <strong>Cargar tareas</strong>, para verificar la disponibilidad de estas.
       </p>
     </div>
   )

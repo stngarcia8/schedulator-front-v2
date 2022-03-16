@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import image from '../../../assets/images/task.png'
 import './displayitemcomponent.scss'
 
@@ -25,6 +26,10 @@ const DisplayItemComponent = (props) => {
       {renderItems()}
     </div>
   )
+}
+
+DisplayItemComponent.PropTypes = {
+  tasks: PropTypes.any
 }
 
 export default DisplayItemComponent
