@@ -93,6 +93,7 @@
   },
   "eslintConfig": {
     "env": {
+      "browser": true,
       "es6": true,
       "cypress/globals": true
     },

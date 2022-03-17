@@ -1,11 +1,13 @@
 import ErrorComponent from './errors/ErrorComponent'
+import Sorter from './sorter/Sorter'
 import ButtonLoadComponent from './load/ButtonLoadComponent'
-import NoTaskComponent from './notask/NoTaskComponent'
+import NoTask from './notask/NoTask'
 import ResumeComponent from './resume/ResumeComponent'
 import DisplayListComponent from './display/DisplayListComponent'
-import SorterComponent from './sorter/SorterComponent'
+import DisplayModalComponent from './display/DisplayModalComponent'
 
 export {
-  ErrorComponent, ButtonLoadComponent,
-  NoTaskComponent, ResumeComponent, DisplayListComponent, SorterComponent
+  ErrorComponent, ButtonLoadComponent, Sorter,
+  NoTask, ResumeComponent,
+  DisplayListComponent, DisplayModalComponent
 }

@@ -42,7 +42,7 @@ $fgSecondaryColor: rgb(0, 100, 0);
 // flex display column mixin
 @mixin flexColumn {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
 }
 
 // flex center mixin
@@ -62,8 +62,8 @@ $fgSecondaryColor: rgb(0, 100, 0);
 
 @mixin paragraph {
   padding: 2.5rem 3vw;
-  line-height: 1.5rem;
-  font-size: 1.5rem;
+  line-height: 0.8rem;
+  font-size: 0.8rem;
   text-align: justify;
 }
 
@@ -96,7 +96,7 @@ $fgSecondaryColor: rgb(0, 100, 0);
 }
 
 @mixin smallMobile {
-  @media only screen and (min-width: 568px) {
+  @media only screen and (max-width: 568px) {
     @content;
   }
 }
@@ -113,8 +113,8 @@ $fgSecondaryColor: rgb(0, 100, 0);
   }
 }
 
-@mixin desktop{
-  @media only screen and (min-width: 1113px) and (max-width1920px) {
+@mixin desktop {
+  @media only screen and (min-width: 1113px) {
     @content;
   }
 }

@@ -9,28 +9,28 @@ const initialState = {
 const uiReducer = (state = initialState, action) => {
   switch (action.type) {
     case UiTypes.SHOW_LOADING_INDICATOR:
-      return changeLoadingStatus(true)
+      return changeLoadingStatus(state, true)
     case UiTypes.HIDE_LOADING_INDICATOR:
-      return changeLoadingStatus(false)
+      return changeLoadingStatus(state, false)
     case UiTypes.ORDER_BY_DURATION:
-      return changeSearchType(SearchType.BY_TASK_DURATION)
+      return changeSearchType(state, SearchType.BY_TASK_DURATION)
     case UiTypes.ORDER_BY_QUANTITY:
-      return changeSearchType(SearchType.BY_TASK_PER_DAY)
+      return changeSearchType(state, SearchType.BY_TASK_PER_DAY)
     default:
-      return initialState
+      return state
   }
 }
 
-const changeLoadingStatus = (status) => {
+const changeLoadingStatus = (state, status) => {
   return {
-    ...initialState,
+    ...state,
     loading: status
   }
 }
 
-const changeSearchType = (searchType) => {
+const changeSearchType = (state, searchType) => {
   return {
-    ...initialState,
+    ...state,
     search: searchType
   }
 }

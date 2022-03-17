@@ -1,15 +1,14 @@
 import React from 'react'
-import { ButtonLoadComponent, SorterComponent, NoTaskComponent, ErrorComponent, ResumeComponent, DisplayListComponent } from '.'
+import { ButtonLoadComponent, Sorter, NoTask, ErrorComponent, ResumeComponent, DisplayListComponent, DisplayModalComponent } from '.'
 import { useTaskData } from '../../hooks'
-import DisplayModalComponent from './display/DisplayModalComponent'
-import './tasksection.scss'
+import './TaskSection.scss'
 
 const TaskSection = () => {
   const { noTask, isDataLoadingError } = useTaskData()
 
   const renderContent = () => {
     if (isDataLoadingError()) return (<ErrorComponent />)
-    if (noTask()) return (<NoTaskComponent />)
+    if (noTask()) return (<NoTask />)
     return (
       <>
         <ResumeComponent />
@@ -22,7 +21,7 @@ const TaskSection = () => {
   return (
     <div className='section-container'>
       <div className='controls-section'>
-        <SorterComponent />
+        <Sorter />
         <ButtonLoadComponent />
       </div>
       {renderContent()}

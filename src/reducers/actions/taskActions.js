@@ -1,9 +1,9 @@
 import { showLoadingIndicator, hideLoadingIndicator } from './uiActions'
 import TaskApi from '../../api/TaskApi'
-import { URI_BY_TASK_DURATION, URI_BY_TASK_PER_DAY, SearchType } from '../../shared/contants'
 import { TaskTypes } from '../types/TaskTypes'
+import { uriResolver, typeResolver, exceptionCodeStatusResolver } from './helpers/task-helper'
 
-const loadTask = (searchType) => {
+export const loadTask = (searchType) => {
   return async (dispatch) => {
     try {
       dispatch(showLoadingIndicator())
@@ -17,22 +17,10 @@ const loadTask = (searchType) => {
   }
 }
 
-const uriResolver = (searchType) => {
-  return searchType === SearchType.BY_TASK_DURATION
-    ? URI_BY_TASK_DURATION
-    : URI_BY_TASK_PER_DAY
-}
-
 const actionTaskDataCreator = (searchType, data) => ({
   type: typeResolver(searchType),
   payload: data
 })
-
-const typeResolver = (searchType) => {
-  return searchType === SearchType.BY_TASK_DURATION
-    ? TaskTypes.GET_BY_TASK_DURATION
-    : TaskTypes.GET_BY_TASK_PER_DAY
-}
 
 const actionExceptionCreator = (err) => {
   return {
@@ -41,14 +29,4 @@ const actionExceptionCreator = (err) => {
       codeStatus: exceptionCodeStatusResolver(err)
     }
   }
-}
-
-const exceptionCodeStatusResolver = (err) => {
-  return err.toJSON().status
-    ? err.toJSON().status
-    : 500
-}
-
-export {
-  loadTask
 }

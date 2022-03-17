@@ -2,9 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useOrderSelector } from '../../../hooks'
 import { SearchType } from '../../../shared/contants'
-import './sortercomponent.scss'
+import './Sorter.scss'
 
-const SorterComponent = () => {
+const Sorter = () => {
   const { search } = useSelector(state => state.uiData)
   const { handleChange } = useOrderSelector()
 
@@ -19,4 +19,4 @@ const SorterComponent = () => {
   )
 }
 
-export default SorterComponent
+export default Sorter

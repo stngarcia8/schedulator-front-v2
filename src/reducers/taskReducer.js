@@ -10,19 +10,19 @@ const initialState = {
 const taskReducer = (state = initialState, action) => {
   switch (action.type) {
     case TaskTypes.GET_BY_TASK_DURATION:
-      return stateResolver(action.payload)
+      return stateResolver(state, action.payload)
     case TaskTypes.GET_BY_TASK_PER_DAY:
-      return stateResolver(action.payload)
+      return stateResolver(state, action.payload)
     case TaskTypes.GET_AN_EXCEPTION:
-      return exceptionResolver(action.payload)
+      return exceptionResolver(state, action.payload)
     default:
-      return initialState
+      return state
   }
 }
 
-const stateResolver = (payload) => {
+const stateResolver = (state, payload) => {
   return {
-    ...initialState,
+    ...state,
     totalTasks: payload.totalTasks,
     totalDays: payload.totalDays,
     statusResponse: 200,
@@ -32,7 +32,7 @@ const stateResolver = (payload) => {
 
 const exceptionResolver = (state, payload) => {
   return {
-    ...initialState,
+    ...state,
     statusResponse: payload.codeStatus
   }
 }
