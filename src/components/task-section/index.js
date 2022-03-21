@@ -1,13 +1,9 @@
-import ErrorComponent from './errors/ErrorComponent'
 import Sorter from './sorter/Sorter'
 import ButtonLoadComponent from './load/ButtonLoadComponent'
-import NoTask from './notask/NoTask'
-import ResumeComponent from './resume/ResumeComponent'
-import DisplayListComponent from './display/DisplayListComponent'
-import DisplayModalComponent from './display/DisplayModalComponent'
+import Resume from './resume/Resume'
+import DayList from './display/DayList'
+import DayModal from './display/DayModal'
 
 export {
-  ErrorComponent, ButtonLoadComponent, Sorter,
-  NoTask, ResumeComponent,
-  DisplayListComponent, DisplayModalComponent
+  ButtonLoadComponent, Sorter, Resume, DayList, DayModal
 }

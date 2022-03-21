@@ -1,7 +1,5 @@
-import {
-  SearchType, URI_DURATION, URI_QUANTITY
-} from '../../../shared/contants'
-import { TaskTypes } from '../../types/TaskTypes'
+import { SearchType, URI_DURATION, URI_QUANTITY } from '../../../shared/contants'
+import { TaskTypes } from '../TaskTypes'
 
 export const uriResolver = (searchType) => {
   return searchType === SearchType.BY_TASK_DURATION

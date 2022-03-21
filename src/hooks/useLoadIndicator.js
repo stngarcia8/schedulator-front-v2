@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { showLoadingIndicator } from '../reducers/actions/uiActions'
+import { showLoadingIndicator } from '../reducers/ui-reducer/uiActions'
 
 export const useLoadIndicator = () => {
   const { dispatch } = useDispatch()

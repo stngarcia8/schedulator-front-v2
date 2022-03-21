@@ -1,11 +1,16 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "es6": true,
+        "cypress/globals": true,
+        "jest/globals": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:cypress/recommended",
+        "plugin:jest/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,9 +20,19 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "cypress",
+        "jest"
     ],
-    "rules": {
-        "react/prop-types": "off"
-    }
+    "rules": {},
+    "overrides": [
+        {
+            "files": [
+                "**/*.stories.*"
+            ],
+            "rules": {
+                "import/no-anonymous-default-export": "off"
+            }
+        }
+    ]
 }

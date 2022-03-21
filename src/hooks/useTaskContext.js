@@ -21,8 +21,6 @@ export const useTaskContext = () => {
   }
 
   const getTasksOfTheDay = () => {
-    console.log('cachando que tiene el tasks')
-    console.log(taskContext.currentDay.tasks)
     return taskContext.currentDay.tasks
   }
 

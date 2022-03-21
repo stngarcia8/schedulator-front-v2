@@ -1,10 +1,10 @@
 import React from 'react'
 import { useTaskData, useDetailButton } from '../../../hooks'
 import { BsFolderCheck } from 'react-icons/bs'
-import './displaylistcomponent.scss'
+import './DayList.scss'
 import Logo from '../../../assets/images/task.png'
 
-const DisplayListComponent = () => {
+const DayList = () => {
   const { getDays } = useTaskData()
   const { handleDetailButtonClick } = useDetailButton()
 
@@ -41,4 +41,4 @@ const DisplayListComponent = () => {
   )
 }
 
-export default DisplayListComponent
+export default DayList

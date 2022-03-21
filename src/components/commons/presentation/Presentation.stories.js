@@ -2,7 +2,7 @@ import React from 'react'
 import Presentation from './Presentation'
 
 export default {
-  title: 'Presentation component',
+  title: 'Presentation',
   component: Presentation
 }
 

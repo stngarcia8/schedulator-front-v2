@@ -1,4 +1,4 @@
-import { TaskTypes } from './types/TaskTypes'
+import { TaskTypes } from './TaskTypes'
 
 const initialState = {
   totalTasks: 0,

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { orderByDuration, orderByQuantity } from '../reducers/actions/uiActions'
+import { orderByDuration, orderByQuantity } from '../reducers/ui-reducer/uiActions'
 import { SearchType } from '../shared/contants'
 
 export const useOrderSelector = () => {

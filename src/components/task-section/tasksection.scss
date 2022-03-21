@@ -1,7 +1,10 @@
 @use '../../styles/globals/Mixins.scss'as *;
 
 .section-container {
+  width: 100%;
+  min-height: 63vh;
   background-color: $bgBodyColor;
+  padding: 15px;
   color: $fgBodyColor;
 }
 
@@ -9,6 +12,6 @@
 .controls-section {
   @include flexColumn;
   @include flexCenter;
-  justify-content:space-evenly;
+  justify-content: space-between;
   padding: 10px;
 }

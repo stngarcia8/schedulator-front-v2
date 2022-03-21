@@ -2,17 +2,17 @@ import React from 'react'
 import { BsCheckCircle } from 'react-icons/bs'
 import { Modal } from 'react-bootstrap'
 import { useTaskContext, useModalForm } from '../../../hooks'
-import DisplayItemComponent from './DisplayItemComponent'
+import TaskList from './TaskList'
 import image from '../../../assets/images/task.png'
 import '../../../styles/boostrap/bootstrap.min.css'
-import './displaymodalcomponent.scss'
+import './DayModal.scss'
 
-const DisplayModalComponent = () => {
+const DayModal = () => {
   const { modalIsOpen } = useTaskContext()
   const { day, closeModal } = useModalForm()
 
   return (
-    <Modal show={modalIsOpen()} onClose={closeModal} onHide={() => { closeModal() }} backdrop='static' keyboard={false} size='md'>
+    <Modal show={modalIsOpen()} onClose={closeModal} onHide={() => { closeModal() }} backdrop='static' keyboard={false} size='lg'>
       <Modal.Header>
         <Modal.Title>
           <div className='header-content '>
@@ -25,7 +25,7 @@ const DisplayModalComponent = () => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <DisplayItemComponent tasks={day.tasks} />
+        <TaskList tasks={day.tasks} />
       </Modal.Body>
 
       <Modal.Footer>
@@ -42,4 +42,4 @@ const DisplayModalComponent = () => {
   )
 }
 
-export default DisplayModalComponent
+export default DayModal

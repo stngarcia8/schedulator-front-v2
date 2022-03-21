@@ -1,5 +1,5 @@
-import { SearchType } from '../shared/contants'
-import { UiTypes } from './types/UiTypes'
+import { SearchType } from '../../shared/contants'
+import { UiTypes } from './UiTypes'
 
 const initialState = {
   loading: false,

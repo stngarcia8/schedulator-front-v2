@@ -1,4 +1,4 @@
-import { UiTypes } from '../types/UiTypes'
+import { UiTypes } from './UiTypes'
 
 export const showLoadingIndicator = () => {
   return (dispatch) => dispatch(actionCreator(UiTypes.SHOW_LOADING_INDICATOR))

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { loadTask } from '../reducers/actions/taskActions'
+import { loadTask } from '../reducers/task-reducer/taskActions'
 
 export const useLoadButton = () => {
   const dispatch = useDispatch()

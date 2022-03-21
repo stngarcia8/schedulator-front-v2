@@ -1,6 +1,6 @@
-import { showLoadingIndicator, hideLoadingIndicator } from './uiActions'
+import { showLoadingIndicator, hideLoadingIndicator } from '../ui-reducer/uiActions'
 import TaskApi from '../../api/TaskApi'
-import { TaskTypes } from '../types/TaskTypes'
+import { TaskTypes } from './TaskTypes'
 import { uriResolver, typeResolver, exceptionCodeStatusResolver } from './helpers/task-helper'
 
 export const loadTask = (searchType) => {

@@ -31,6 +31,10 @@ export const useTaskData = () => {
     return statusResponse === 500
   }
 
+  const getStatusMessage = () => {
+    return statusResponse
+  }
+
   return {
     getTotalTasks,
     getTotalDays,
@@ -38,6 +42,7 @@ export const useTaskData = () => {
     noTask,
     isDataLoadingError,
     isNotFoundError,
-    isInternalServerError
+    isInternalServerError,
+    getStatusMessage
   }
 }

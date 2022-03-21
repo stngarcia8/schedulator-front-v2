@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTaskData } from '../../../hooks/useTaskData'
 import { BsFillSaveFill, BsFillCheckSquareFill } from 'react-icons/bs'
-import './resumecomponent.scss'
+import './Resume.scss'
 
-const ResumeComponent = () => {
+const Resume = () => {
   const { getTotalTasks, getTotalDays } = useTaskData()
 
   return (
@@ -26,4 +26,4 @@ const ResumeComponent = () => {
   )
 }
 
-export default ResumeComponent
+export default Resume

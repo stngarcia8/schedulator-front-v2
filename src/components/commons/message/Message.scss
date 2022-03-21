@@ -1,28 +1,28 @@
 @use '../../../styles/globals/Mixins.scss'as *;
 
-
-.no-task-container {
+.message-container {
   width: 100%;
-  height: 100%;
   background-color: $bgBodyColor;
 }
 
-.content-container {
+
+.message-title {
+  @include titleText;
+  background-color: $bgBodyColor;
+}
+
+
+.message-content-container {
   @include flexRow;
   justify-content: center;
   align-items: flex-start;
   margin: auto;
 }
 
-.no-task-title {
-  @include titleText;
-  background-color: $bgBodyColor;
-}
 
-.image {
-  width: 25%;
-  height: 25%;
-  background-color: black;
+.message-image {
+  width: 18%;
+  height: 18%;
 }
 
 .no-task-text {
