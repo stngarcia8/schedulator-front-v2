@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useMessage } from '../../../hooks/useMessage'
+import { useMessage } from '../../hooks'
 import './Message.scss'
 
 const Message = ({ messageCode }) => {

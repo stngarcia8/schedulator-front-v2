@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import image from '../../../assets/images/task.png'
+import image from '../../assets/images/task.png'
 import './TaskList.scss'
 
 const TaskList = (tasks) => {

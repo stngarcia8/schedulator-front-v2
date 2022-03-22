@@ -5,7 +5,7 @@ import { useTaskContext } from './useTaskContext'
 import { useDetailButton } from './useDetailButton'
 import { useModalForm } from './useModalForm'
 import { useOrderSelector } from './useOrderSelector'
-
+import { useMessage } from './useMessage'
 export {
-  useLoadButton, useLoadIndicator, useTaskData, useTaskContext, useDetailButton, useModalForm, useOrderSelector
+  useLoadButton, useLoadIndicator, useTaskData, useTaskContext, useDetailButton, useModalForm, useOrderSelector, useMessage
 }

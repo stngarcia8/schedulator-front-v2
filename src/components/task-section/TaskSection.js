@@ -1,17 +1,17 @@
 import React from 'react'
-import { ButtonLoadComponent, Sorter, Resume, DayList, DayModal } from '.'
-import { Message } from '../commons'
+import { ButtonLoadComponent, Sorter, DayList, DayModal } from '.'
+import { Message, Resume } from '../'
 import { useTaskData } from '../../hooks'
 import './TaskSection.scss'
 
 const TaskSection = () => {
-  const { noTask, isDataLoadingError, getStatusMessage } = useTaskData()
+  const { noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays } = useTaskData()
 
   const renderContent = () => {
     if (noTask() || isDataLoadingError()) return (<Message messageCode={getStatusMessage()} />)
     return (
       <>
-        <Resume />
+        <Resume getTotalTasks={getTotalTasks()} getTotalDays={getTotalDays()} />
         <DayList />
         <DayModal />
       </>

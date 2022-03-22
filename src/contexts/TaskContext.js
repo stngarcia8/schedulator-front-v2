@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const TaskContext = React.createContext()
 export const TaskContextProvider = ({ children }) => {
@@ -16,4 +17,8 @@ export const TaskContextProvider = ({ children }) => {
       {children}
     </TaskContext.Provider>
   )
+}
+
+TaskContextProvider.propTypes = {
+  children: PropTypes.node
 }

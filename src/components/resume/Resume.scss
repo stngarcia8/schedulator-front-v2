@@ -1,17 +1,17 @@
-@use '../../../styles/globals/Mixins.scss'as *;
+@use '../../styles/globals/Mixins.scss'as *;
 
 
 .resume {
   @include flexRow;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  background-color: $bgBodyColor
 }
 
 .resume-section {
   @include flexRow;
   @include flexCenter;
-  padding: 20px;
 }
 
 .title4 {

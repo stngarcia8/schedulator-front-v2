@@ -3,6 +3,11 @@ import { render, screen } from '@testing-library/react'
 import Footer from './Footer'
 
 describe('Footer component should', () => {
+  test('render footer tag in page', () => {
+    render(<Footer />)
+    const footerTag = document.querySelector('footer')
+    expect(footerTag).toBeInTheDocument()
+  })
   test('render first line in footer component', () => {
     render(<Footer />)
     const text = screen.getByText(/Task Schedulator Front - desarrollado por Daniel García Loyola/i)

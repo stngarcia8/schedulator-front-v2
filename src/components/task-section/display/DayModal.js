@@ -1,10 +1,9 @@
 import React from 'react'
 import { BsCheckCircle } from 'react-icons/bs'
-import { Modal } from 'react-bootstrap'
+import Modal from '../../modals/Modal'
 import { useTaskContext, useModalForm } from '../../../hooks'
-import TaskList from './TaskList'
+import TaskList from '../../task-list/TaskList'
 import image from '../../../assets/images/task.png'
-import '../../../styles/boostrap/bootstrap.min.css'
 import './DayModal.scss'
 
 const DayModal = () => {
@@ -12,23 +11,21 @@ const DayModal = () => {
   const { day, closeModal } = useModalForm()
 
   return (
-    <Modal show={modalIsOpen()} onClose={closeModal} onHide={() => { closeModal() }} backdrop='static' keyboard={false} size='lg'>
-      <Modal.Header>
-        <Modal.Title>
-          <div className='header-content '>
-            <img className='image' src={image} alt='Task' />
-            <div>
-              <h1> Día {day.dayNumber} </h1>
-              <h4>Tareas asignadas: <strong> {day.taskPerDay}</strong></h4>
-            </div>
+    <Modal isOpen={modalIsOpen()} onClose={closeModal}>
+      <div className='modal-header'>
+        <div className='header-content '>
+          <img className='image' src={image} alt='Task' />
+          <div>
+            <h1> Día {day.dayNumber} </h1>
+            <h4>Tareas asignadas: <strong> {day.taskPerDay}</strong></h4>
           </div>
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <TaskList tasks={day.tasks} />
-      </Modal.Body>
+        </div>
+      </div>
 
-      <Modal.Footer>
+      <div className='modal-body'>
+        <TaskList tasks={day.tasks} />
+      </div>
+      <div className='modal-footer'>
         <button
           type='button' className='modal-button'
           onClick={() => closeModal()}
@@ -36,7 +33,7 @@ const DayModal = () => {
           <BsCheckCircle className='buttonIcon' />
           Aceptar
         </button>
-      </Modal.Footer>
+      </div>
 
     </Modal>
   )

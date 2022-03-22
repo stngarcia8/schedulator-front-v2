@@ -15,7 +15,7 @@ export const MESSAGE_TYPES = {
   },
   ERROR_400: {
     title: 'Un error ha ocurrido',
-    text: '     No ha sido posible cargar tareas, el servidor no encuentra información para desplegar la solicitud realizada.  Disculpe las molestias.',
+    text: 'No ha sido posible cargar tareas, el servidor no encuentra información para desplegar la solicitud realizada.  Disculpe las molestias.',
     imageName: 'error404.png'
   },
   ERROR_500: {

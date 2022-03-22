@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Presentation, Footer } from '../components/commons'
+import { Header, Presentation, Footer } from '../components'
 import TaskSection from '../components/task-section/TaskSection'
 import './homepage.scss'
 
