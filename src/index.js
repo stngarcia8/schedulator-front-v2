@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 import { store } from './reducers/store'
 import AppContainer from './containers/AppContainer'
 import './index.scss'
+import ReduxWrapper from './wrappers/ReduxWrapper'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <ReduxWrapper store={store}>
       <AppContainer />
-    </Provider>
+    </ReduxWrapper>
   </React.StrictMode>,
   document.getElementById('root')
 )
