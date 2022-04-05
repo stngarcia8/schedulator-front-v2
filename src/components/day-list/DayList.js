@@ -1,15 +1,12 @@
 import React from 'react'
-import { useTaskData, useDetailButton } from '../../../hooks'
-import { BsFolderCheck } from 'react-icons/bs'
+import PropTypes from 'prop-types'
+import { DetailButton } from '../'
+import Logo from '../../assets/images/task.png'
 import './DayList.scss'
-import Logo from '../../../assets/images/task.png'
 
-const DayList = () => {
-  const { getDays } = useTaskData()
-  const { handleDetailButtonClick } = useDetailButton()
-
+const DayList = ({ days }) => {
   const renderTask = () => {
-    return getDays().map((day, index) => {
+    return days.map((day, index) => {
       return (
         <div key={index} className='task-item'>
           <img className='image-detail' src={Logo} alt='task' />
@@ -18,14 +15,7 @@ const DayList = () => {
             <span className='text-detail'>
               Tareas: {day.taskPerDay}
             </span>
-            <button
-              className='button-details'
-              value={day?.dayNumber}
-              onClick={(e) => handleDetailButtonClick(e)}
-            >
-              <BsFolderCheck className='button-icon' />
-              Ver detalles
-            </button>
+            <DetailButton dayNumber={day.dayNumber} />
           </div>
         </div>
       )
@@ -38,6 +28,20 @@ const DayList = () => {
         {renderTask()}
       </div>
     </>
+  )
+}
+
+DayList.propTypes = {
+  days: PropTypes.arrayOf(
+    PropTypes.shape({
+      dayNumber: PropTypes.number,
+      taskPerDay: PropTypes.number,
+      tasks: PropTypes.arrayOf({
+        taskId: PropTypes.string,
+        taskName: PropTypes.string,
+        duration: PropTypes.number
+      })
+    })
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { BsCheckCircle } from 'react-icons/bs'
-import Modal from '../../modals/Modal'
-import { useTaskContext, useModalForm } from '../../../hooks'
-import TaskList from '../../task-list/TaskList'
-import image from '../../../assets/images/task.png'
+import Modal from '../modals/Modal'
+import { useTaskContext, useModalForm } from '../../hooks'
+import TaskList from '../task-list/TaskList'
+import image from '../../assets/images/task.png'
 import './DayModal.scss'
 
 const DayModal = () => {

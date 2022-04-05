@@ -1,9 +1,9 @@
-@use '../../../styles/globals/Mixins.scss'as *;
+@use '../../styles/globals/Mixins.scss'as *;
 
 .header-content {
   width: 100%;
   @include flexRow;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 .image {
@@ -14,7 +14,7 @@
 .modal-button {
   width: 40%;
   font-size: large;
-  background-color:  $bgPrimaryColor;
+  background-color: $bgPrimaryColor;
   color: $fgPrimaryColor;
   @include roundedButton;
 }
@@ -27,4 +27,3 @@
   @include flexRow;
   justify-content: start;
 }
-  

@@ -1,7 +1,7 @@
 import React from 'react'
-import './loadindicatorcomponent.scss'
+import './LoadIndicator.scss'
 
-const LoadIndicatorComponent = () => {
+const LoadIndicator = () => {
   return (
     <div className='indicator-container'>
       <div className='indicator-spinner' />
@@ -10,4 +10,4 @@ const LoadIndicatorComponent = () => {
   )
 }
 
-export default LoadIndicatorComponent
+export default LoadIndicator

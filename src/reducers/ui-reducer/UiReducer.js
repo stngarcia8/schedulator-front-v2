@@ -1,9 +1,9 @@
-import { SearchType } from '../../shared/contants'
+import { OrderType } from '../../shared/contants'
 import { UiTypes } from './UiTypes'
 
 const initialState = {
   loading: false,
-  search: SearchType.BY_TASK_DURATION
+  search: OrderType.BY_TASK_DURATION
 }
 
 const uiReducer = (state = initialState, action) => {
@@ -13,9 +13,9 @@ const uiReducer = (state = initialState, action) => {
     case UiTypes.HIDE_LOADING_INDICATOR:
       return changeLoadingStatus(state, false)
     case UiTypes.ORDER_BY_DURATION:
-      return changeSearchType(state, SearchType.BY_TASK_DURATION)
+      return changeSearchType(state, OrderType.BY_TASK_DURATION)
     case UiTypes.ORDER_BY_QUANTITY:
-      return changeSearchType(state, SearchType.BY_TASK_PER_DAY)
+      return changeSearchType(state, OrderType.BY_TASK_PER_DAY)
     default:
       return state
   }

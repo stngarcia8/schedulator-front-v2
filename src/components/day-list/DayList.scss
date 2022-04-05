@@ -1,4 +1,4 @@
-@use '../../../styles/globals/Mixins.scss'as *;
+@use '../../styles/globals/Mixins.scss'as *;
 
 
 .task-display {
@@ -35,26 +35,7 @@
   font-size: 1.3rem;
 }
 
-.button-details {
-  background-color: $bgSecondaryColor;
-  color: $fgSecondaryColor;
-  @include roundedButton;
-  border: 2px solid $fgBodyColor;
-  font-size: 1.25rem;
-  height: 3rem;
-
-  &:hover {
-    background-color: $bgPrimaryColor;
-    color: $fgPrimaryColor;
-    border: none;
-  }
-}
-
-.button-icon {
-  @include buttonIcon;
-}
-
-.group-details{
+.group-details {
   @include flexColumn;
-  margin:5px;
+  margin: 5px;
 }

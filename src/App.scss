@@ -1,8 +1,9 @@
-@use '../styles/globals/Mixins.scss'as *;
+@use './styles/globals/Mixins.scss'as *;
 
 
 html,
-body {
+body,
+.body-container {
     font-family: $fontFamily;
     font-size: $fontSize;
     color: $fgBodyColor;

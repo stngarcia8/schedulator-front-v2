@@ -1,0 +1,20 @@
+@use '../../styles/globals/Mixins.scss'as *;
+
+.button-details {
+  background-color: $bgSecondaryColor;
+  color: $fgSecondaryColor;
+  @include roundedButton;
+  border: 2px solid $fgBodyColor;
+  font-size: 1.25rem;
+  height: 3rem;
+
+  &:hover {
+    background-color: $bgPrimaryColor;
+    color: $fgPrimaryColor;
+    border: none;
+  }
+}
+
+.button-icon {
+  @include buttonIcon;
+}
