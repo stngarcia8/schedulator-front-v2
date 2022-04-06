@@ -4,8 +4,9 @@ import { DetailButton } from '../'
 import Logo from '../../assets/images/task.png'
 import './DayList.scss'
 
-const DayList = ({ days }) => {
+const DayList = ({ loading, days, onClick }) => {
   const renderTask = () => {
+    if (loading) return (<></>)
     return days.map((day, index) => {
       return (
         <div key={index} className='task-item'>
@@ -15,7 +16,7 @@ const DayList = ({ days }) => {
             <span className='text-detail'>
               Tareas: {day.taskPerDay}
             </span>
-            <DetailButton dayNumber={day.dayNumber} />
+            <DetailButton dayNumber={day.dayNumber} onClick={onClick} />
           </div>
         </div>
       )
@@ -32,6 +33,7 @@ const DayList = ({ days }) => {
 }
 
 DayList.propTypes = {
+  loading: PropTypes.bool,
   days: PropTypes.arrayOf(
     PropTypes.shape({
       dayNumber: PropTypes.number,
@@ -42,7 +44,8 @@ DayList.propTypes = {
         duration: PropTypes.number
       })
     })
-  )
+  ),
+  onClick: PropTypes.func
 }
 
 export default DayList

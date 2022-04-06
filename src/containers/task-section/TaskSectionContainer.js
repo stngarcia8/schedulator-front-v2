@@ -11,13 +11,21 @@ const TaskSectionContainer = () => {
   const { search, loading } = useSelector(state => state.uiData)
   const { noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays } = useTaskData()
   const [isLoadingData, setIsLoadingData] = useState(loading)
+  const [disableButton, setDisableButton] = useState(true)
+  const [orderValue, setOrderValue] = useState('')
 
   useEffect(() => {
     setIsLoadingData(loading)
-  }, [loading])
+  }, [loading, orderValue])
 
   const onChange = (event) => {
     event.preventDefault()
+    if (!event.target.value) {
+      setOrderValue('')
+      return setDisableButton(true)
+    }
+    setOrderValue(event.target.value)
+    setDisableButton(false)
     const optionValue = event.target.value
     optionValue === OrderType.BY_TASK_DURATION
       ? dispatch(orderByDuration())
@@ -33,6 +41,8 @@ const TaskSectionContainer = () => {
     if (isLoadingData) return (<LoadIndicator />)
     return (
       <TaskSection
+        loading={isLoadingData}
+        disableButton={disableButton}
         noTask={noTask()}
         isDataLoadingError={isDataLoadingError()}
         getStatusMessage={getStatusMessage()}

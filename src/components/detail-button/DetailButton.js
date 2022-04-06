@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { BsFolderCheck } from 'react-icons/bs'
 import './DetailButton.scss'
 
-const DetailButton = ({ dayNumber, detailButtonOnClick }) => {
+const DetailButton = ({ dayNumber, onClick }) => {
   return (
     <>
       <button
         className='button-details'
         value={dayNumber}
-        onClick={(e) => detailButtonOnClick(e)}
+        onClick={(e) => onClick(e)}
       >
         <BsFolderCheck className='button-icon' />
         Ver detalles
@@ -18,9 +18,9 @@ const DetailButton = ({ dayNumber, detailButtonOnClick }) => {
   )
 }
 
-DetailButton.propType = {
+DetailButton.propTypes = {
   dayNumber: PropTypes.number,
-  detailButtonOnClick: PropTypes.func
+  onClick: PropTypes.func
 }
 
 export default DetailButton

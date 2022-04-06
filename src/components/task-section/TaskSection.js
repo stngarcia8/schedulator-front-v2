@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Message, LoadButton, Sorter, Resume, DayList, DayModal } from '../'
+import { Message, LoadButton, Sorter, Resume, DayModal } from '../'
+import { DayListContainer } from '../../containers'
 import './TaskSection.scss'
 
-const TaskSection = ({ noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays, onChange, onClick }) => {
+const TaskSection = ({ loading, disableButton, noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays, onChange, onClick }) => {
   const renderContent = () => {
     if (noTask || isDataLoadingError) return (<Message messageCode={getStatusMessage} />)
     return (
       <>
         <Resume getTotalTasks={getTotalTasks} getTotalDays={getTotalDays} />
-        <DayList />
+        <DayListContainer loading={loading} />
         <DayModal />
       </>
     )
@@ -19,7 +20,7 @@ const TaskSection = ({ noTask, isDataLoadingError, getStatusMessage, getTotalTas
     <div className='section-container'>
       <div className='controls-section'>
         <Sorter onChange={onChange} />
-        <LoadButton onClick={onClick} />
+        <LoadButton disableButton={disableButton} onClick={onClick} />
       </div>
       {renderContent()}
     </div>
@@ -27,6 +28,8 @@ const TaskSection = ({ noTask, isDataLoadingError, getStatusMessage, getTotalTas
 }
 
 TaskSection.propTypes = {
+  loading: PropTypes.bool,
+  disableButton: PropTypes.bool,
   noTask: PropTypes.bool.isRequired,
   isDataLoadingError: PropTypes.bool.isRequired,
   getStatusMessage: PropTypes.number,

@@ -16,6 +16,13 @@
   }
 }
 
+.load-button-disable {
+  background-color: $bgDisableColor;
+  color: $fgBodyColor;
+  @include roundedButton;
+  padding: 15px 2rem;
+}
+
 .icon {
   @include buttonIcon;
 }
