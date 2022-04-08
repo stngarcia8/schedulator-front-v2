@@ -5,12 +5,13 @@
   @include flexRow;
   justify-content: center;
   align-items: center;
+  background-color: $bgBodyColor;
 }
 
 .indicator-spinner {
-  border: 5px solid rgba(0, 0, 0, .1);
+  border: 5px solid rgba(0, 0, 0, .5);
   border-left-color: transparent;
-  @include borderRadius(50%);
+  @include borderRadius(55%);
   width: 2rem;
   height: 2rem;
   animation: spin 1s linear infinite;

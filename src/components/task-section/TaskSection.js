@@ -4,7 +4,7 @@ import { Message, LoadButton, Sorter, Resume, DayModal } from '../'
 import { DayListContainer } from '../../containers'
 import './TaskSection.scss'
 
-const TaskSection = ({ loading, disableButton, noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays, onChange, onClick }) => {
+const TaskSection = ({ loading, disableButton, actualValue, noTask, isDataLoadingError, getStatusMessage, getTotalTasks, getTotalDays, onChange, onClick }) => {
   const renderContent = () => {
     if (noTask || isDataLoadingError) return (<Message messageCode={getStatusMessage} />)
     return (
@@ -19,7 +19,7 @@ const TaskSection = ({ loading, disableButton, noTask, isDataLoadingError, getSt
   return (
     <div className='section-container'>
       <div className='controls-section'>
-        <Sorter onChange={onChange} />
+        <Sorter actualValue={actualValue} onChange={onChange} />
         <LoadButton disableButton={disableButton} onClick={onClick} />
       </div>
       {renderContent()}
@@ -30,6 +30,7 @@ const TaskSection = ({ loading, disableButton, noTask, isDataLoadingError, getSt
 TaskSection.propTypes = {
   loading: PropTypes.bool,
   disableButton: PropTypes.bool,
+  actualValue: PropTypes.string,
   noTask: PropTypes.bool.isRequired,
   isDataLoadingError: PropTypes.bool.isRequired,
   getStatusMessage: PropTypes.number,

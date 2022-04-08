@@ -4,7 +4,7 @@
 .task-display {
   display: grid;
   gap: 1.5rem;
-  grid-auto-rows: 10rem;
+  grid-auto-rows: 13rem;
   grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
 }
 

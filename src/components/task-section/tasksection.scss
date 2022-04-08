@@ -2,14 +2,15 @@
 
 .section-container {
   width: 100%;
-  min-height: 63vh;
   background-color: $bgBodyColor;
   padding: 15px;
   color: $fgBodyColor;
+  margin-bottom: 20px;
 }
 
 
 .controls-section {
+  height: 150px;
   @include flexColumn;
   @include flexCenter;
   justify-content: space-between;

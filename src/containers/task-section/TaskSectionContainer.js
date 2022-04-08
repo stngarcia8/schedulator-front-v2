@@ -43,6 +43,7 @@ const TaskSectionContainer = () => {
       <TaskSection
         loading={isLoadingData}
         disableButton={disableButton}
+        actualValue={orderValue}
         noTask={noTask()}
         isDataLoadingError={isDataLoadingError()}
         getStatusMessage={getStatusMessage()}

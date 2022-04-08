@@ -2,7 +2,7 @@ import React from 'react'
 import Resume from './Resume'
 
 export default {
-  title: 'Resume',
+  title: 'Resume component',
   component: Resume
 }
 
