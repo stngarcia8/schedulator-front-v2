@@ -9,6 +9,8 @@
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage",
     "sonar": "sonar-scanner",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject"
