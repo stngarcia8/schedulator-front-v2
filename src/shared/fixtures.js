@@ -12,8 +12,8 @@ export const dayList = [
     ]
   },
   {
-    dayNumber: 1,
-    taskPerDay: 1,
+    dayNumber: 2,
+    taskPerDay: 2,
     tasks: [
       {
         taskId: 't2',

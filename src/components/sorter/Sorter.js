@@ -6,8 +6,8 @@ import './Sorter.scss'
 const Sorter = ({ actualValue, onChange }) => {
   return (
     <div className='group-controls'>
-      <label labelFor='select-order' className='select-label'>Obtener tareas ordenadas por:</label>
-      <select id='select-order' aria-label='select-order'>
+      <label htmlFor='select-order' className='select-label'>Obtener tareas ordenadas por:</label>
+      <select id='select-order' aria-label='select-order' onChange={onChange}>
         <option defaultValue='' value=''>...seleccione orden</option>
         <option value={OrderType.BY_TASK_DURATION}>Duración de tareas</option>
         <option value={OrderType.BY_TASK_PER_DAY}>Cantidad de tareas asignadas al día</option>

@@ -38,11 +38,15 @@ DayList.propTypes = {
     PropTypes.shape({
       dayNumber: PropTypes.number,
       taskPerDay: PropTypes.number,
-      tasks: PropTypes.arrayOf({
-        taskId: PropTypes.string,
-        taskName: PropTypes.string,
-        duration: PropTypes.number
-      })
+      tasks: PropTypes.arrayOf(
+        PropTypes.shape(
+          {
+            taskId: PropTypes.string,
+            taskName: PropTypes.string,
+            duration: PropTypes.number
+          }
+        )
+      )
     })
   ),
   onClick: PropTypes.func
