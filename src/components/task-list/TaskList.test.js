@@ -21,6 +21,24 @@ describe('Task list  component should', () => {
     expect(text).toBeInTheDocument()
   })
 
+  test('render one task duration', () => {
+    render(<TaskList tasks={tasks} />)
+    const text = screen.getByText(/Duración: 8 hrs/i)
+    expect(text).toBeInTheDocument()
+  })
+
+  test('render task image', () => {
+    const { container } = render(<TaskList tasks={tasks} />)
+    const taskImage = container.querySelector('img')
+    expect(taskImage).toBeInTheDocument()
+  })
+
+  test('render task image with alt property', () => {
+    const { container } = render(<TaskList tasks={tasks} />)
+    const taskImage = container.querySelector('img')
+    expect(taskImage).toHaveAttribute('alt', 'Task 1')
+  })
+
   test('render two tasks', () => {
     task = { ...task, taskId: 't2' }
     render(<TaskList tasks={[...tasks, task]} />)
