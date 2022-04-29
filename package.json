@@ -96,6 +96,7 @@
       "!**/*App.js",
       "!**/*fixtures.js",
       "!**/*Modal.js",
+      "!**/*reducers/**",
       "!**/*contants.js",
       "!**/*UiTypes.js",
       "!**/*TaskTypes.js",
