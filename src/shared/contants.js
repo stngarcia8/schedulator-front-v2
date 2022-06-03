@@ -24,3 +24,7 @@ export const MESSAGE_TYPES = {
     imageName: 'error500.png'
   }
 }
+
+export const ANALYTICS_CATEGORY = 'task-schedulator-front'
+export const ANALYTICS_PAGEVIEW_TYPE = 'pageview'
+export const ANALYTICS_EVENT_TYPE = 'event'

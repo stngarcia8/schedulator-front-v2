@@ -10,7 +10,7 @@ const LoadButton = ({ disableButton, onClick }) => {
         name='load-button'
         className={disableButton ? 'load-button-disable' : 'load-button'}
         disabled={disableButton}
-        onClick={onClick}
+        onClick={(e) => onClick(e)}
       >
         <BsFillCheckCircleFill className='icon' />
         Cargar tareas

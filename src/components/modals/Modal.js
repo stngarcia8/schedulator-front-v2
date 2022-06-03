@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import './Modal.scss'
 
 const Modal = ({ children, isOpen, closeModal }) => {
-  const handleModalContainerClick = (e) => e.stopPropagation()
+  const handleModalContainerClick = (e) => {
+    e.stopPropagation()
+  }
 
   return (
-    <article className={`modal ${isOpen && 'is-open'}`} onClick={closeModal}>
+    <article className={`modal ${isOpen && 'is-open'}`} onClick={(e) => handleModalContainerClick(e)}>
       <div className='modal-container' onClick={handleModalContainerClick}>
         {children}
       </div>
