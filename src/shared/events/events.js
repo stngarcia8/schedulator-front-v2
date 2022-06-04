@@ -18,6 +18,12 @@ export const analyticsEvents = {
     category: ANALYTICS_CATEGORY,
     action: 'get task correctly',
     label: 'load tasks'
+  },
+  clickTaskDetailButton: {
+    name: 'Task detail button click',
+    category: ANALYTICS_CATEGORY,
+    action: 'Press task detail button',
+    label: 'View tasks'
   }
 }
 
