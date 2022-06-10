@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { initializeAnalytics, publishEvents, publishPageView } from '../../analytics/analytics'
+import { publishEvents, publishPageView } from '../../analytics/analytics'
 import { loadTask } from '../../reducers/task-reducer/taskActions'
 import { orderByDuration, orderByQuantity } from '../../reducers/ui-reducer/uiActions'
 import { LoadIndicator, TaskSection } from '../../components'
@@ -17,7 +17,6 @@ const TaskSectionContainer = () => {
   const [orderValue, setOrderValue] = useState('')
 
   useEffect(() => {
-    initializeAnalytics()
     publishEvents(analyticsEvents.loadTaskPage)
     publishPageView(analyticsPageView.startPage)
   }, [])
@@ -32,7 +31,9 @@ const TaskSectionContainer = () => {
       setOrderValue('')
       return setDisableButton(true)
     }
-    publishEvents(createAnalyticsCustomEvents('Select task order', `select task order by ${event.target.value}`, 'load tasks'))
+    // publishEvents(createAnalyticsCustomEvents('Select task order', `select task order by ${event.target.value}`, 'load tasks'))
+    const customProperty = { task_order: event.target.value }
+    publishEvents(analyticsEvents.selectTaskOrder, customProperty)
     setOrderValue(event.target.value)
     setDisableButton(false)
     const optionValue = event.target.value

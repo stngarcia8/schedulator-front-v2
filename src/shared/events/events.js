@@ -13,6 +13,12 @@ export const analyticsEvents = {
     action: 'Press load button',
     label: 'load tasks'
   },
+  selectTaskOrder: {
+    name: 'Select order',
+    category: ANALYTICS_CATEGORY,
+    action: 'Select task order',
+    label: 'load tasks'
+  },
   getTaskOk: {
     name: 'Load task ok',
     category: ANALYTICS_CATEGORY,
