@@ -6,7 +6,7 @@ import { orderByDuration, orderByQuantity } from '../../reducers/ui-reducer/uiAc
 import { LoadIndicator, TaskSection } from '../../components'
 import { useTaskData } from '../../hooks'
 import { OrderType } from '../../shared/contants'
-import { analyticsEvents, createAnalyticsCustomEvents, analyticsPageView } from '../../shared/events'
+import { analyticsEvents, analyticsPageView } from '../../shared/events'
 
 const TaskSectionContainer = () => {
   const dispatch = useDispatch()

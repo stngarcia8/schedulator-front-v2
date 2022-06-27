@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import LoadButton from './LoadButton'
-import { act } from 'react-dom/test-utils'
 
 describe('LoadButton component should', () => {
   test('render load button', () => {
