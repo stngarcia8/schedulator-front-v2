@@ -7,7 +7,7 @@ const Header = () => {
     <header className='header'>
       <div className='brand'>
         <img className='image' src={logo} alt='Task schedulator' />
-        <h1 className='header-title'>
+        <h1 name='page-title' className='header-title'>
           Task Schedulator front
         </h1>
       </div>

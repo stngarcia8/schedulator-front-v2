@@ -1,0 +1,14 @@
+{
+  "projectId": "SCHFRNT",
+  "baseUrl": "http://localhost:3000",
+  "experimentalStudio": true,
+  "chromeWebSecurity": false,
+  "fixturesFolder": "cypress/fixtures",
+  "integrationFolder": "cypress/e2e",
+  "port": 3000,
+  "screenshotOnRunFailure": false,
+  "supportFile": "cypress/commands",
+  "video": false,
+  "viewportWidth": 1280,
+  "viewportHeight": 720
+}
