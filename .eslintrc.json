@@ -3,14 +3,12 @@
         "browser": true,
         "es2021": true,
         "es6": true,
-        "cypress/globals": true,
         "jest/globals": true,
         "node": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:cypress/recommended",
         "plugin:jest/recommended"
     ],
     "globals": {
@@ -27,7 +25,6 @@
     },
     "plugins": [
         "react",
-        "cypress",
         "jest"
     ],
     "rules": {

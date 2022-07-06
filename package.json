@@ -10,8 +10,8 @@
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "test-e2e": "cypress open",
     "sonar": "sonar-scanner",
-    "lint": "standard",
-    "lint-fix": "standard --fix",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject"
@@ -50,9 +50,7 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "^0.0.9",
-    "cypress": "^9.5.2",
     "eslint": "^7.32.0",
-    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.2",
     "eslint-plugin-jsx": "^0.1.0",
@@ -64,7 +62,6 @@
     "eslint-plugin-testing-library": "^5.1.0",
     "nyc": "^15.1.0",
     "sonarqube-scanner": "^2.8.1",
-    "standard": "^16.0.4",
     "storybook-dark-mode": "^1.0.9",
     "webpack": "^5.70.0"
   },
@@ -110,23 +107,6 @@
       "<rootDir>/build/",
       "<rootDir>/node_modules/",
       "<rootDir>/cypress/"
-    ]
-  },
-  "standard": {
-    "env": [
-      "jest",
-      "es6",
-      "browser"
-    ],
-    "globals": [
-      "expect",
-      "before",
-      "beforeEach",
-      "after",
-      "afterEach",
-      "context",
-      "describe",
-      "it"
     ]
   }
 }
